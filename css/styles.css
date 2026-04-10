@@ -112,7 +112,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 12px; /* ESSENCIAL */
-  max-width: 500px;
+  /* max-width: 500px; */
   margin: 0 auto;
 }
 
