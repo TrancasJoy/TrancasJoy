@@ -106,19 +106,42 @@ body {
   font-size: 1.25rem;
   font-weight: 700;
 }
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px; /* ESSENCIAL */
+  max-width: 500px;
+  margin: 0 auto;
+}
+
 .main-nav a {
   color: #fff;
-  margin-left: 1rem;
   text-decoration: none;
   font-weight: 600;
+
+  border-radius: 20px;
+  border: 1px solid #fff;
+
+  padding: 10px 16px;
+  min-width: 120px;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .brand {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
   text-decoration: none;
+  width: 100%;
 }
+
 .brand-logo {
   width: 200px;
   height: 200px;
@@ -128,6 +151,7 @@ body {
   display: block;
   background: #fff;
 }
+
 .brand-text {
   color: #fff;
   font-weight: 700;
