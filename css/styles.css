@@ -30,9 +30,15 @@
     visibility 0.5s;
 }
 
-#splash img {
+/* #splash img {
   width: 400px;
   animation: zoom 1.5s ease-in-out;
+} */
+#splash img {
+  border-radius: 50%;
+  width: 400px;
+  animation: zoom 1.5s ease-in-out;
+  filter: drop-shadow(0 0 20px rgba(200, 110, 60, 0.4));
 }
 
 @keyframes zoom {
