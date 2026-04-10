@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Trancas Joy — Tranças e Penteados</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <meta name="description" content="Trancas Joy — Tranças, penteados e beauty styling. Agende seu atendimento." />
+    <meta
+      name="description"
+      content="Trancas Joy — Tranças, penteados e beauty styling. Agende seu atendimento."
+    />
   </head>
   <body>
     <header class="site-header">
       <div class="container">
         <h1 class="logo">Trancas Joy</h1>
-        <nav>
+        <nav class="main-nav">
           <a href="#servicos">Serviços</a>
+          <a href="#estilos">Estilos</a>
           <a href="#galeria">Galeria</a>
+          <a href="#cuidados">Cuidados</a>
           <a href="#contato">Contato</a>
         </nav>
       </div>
@@ -21,10 +26,20 @@
 
     <main>
       <section class="hero">
-        <div class="container">
-          <h2>Tranças lindas, com cuidado e criatividade</h2>
-          <p>Sou especialista em tranças afro, box braids, twist e penteados para eventos. Veja meu trabalho abaixo e agende já.</p>
-          <a class="btn" href="#contato">Agendar</a>
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="container hero-content">
+          <div class="hero-text">
+            <h2>Tranças lindas, com cuidado e criatividade</h2>
+            <p>
+              Especialista em tranças afro, box braids, twist e penteados para
+              eventos. Trabalho com acabamento profissional e respeito à saúde
+              dos fios.
+            </p>
+            <a class="btn" href="#contato">Agendar</a>
+          </div>
+          <div class="hero-image" aria-hidden="true">
+            <img src="https://via.placeholder.com/640x480?text=Seu+trabalho+%C3%A9+o+protagonista" alt="" />
+          </div>
         </div>
       </section>
 
@@ -36,7 +51,7 @@
             <p>Tranças definidas, duráveis e finalização profissional.</p>
           </div>
           <div class="card">
-            <h4>Vanilla/Passo a passo</h4>
+            <h4>Twist e Penteados</h4>
             <p>Tranças soltas, twists e penteados criativos para festas.</p>
           </div>
           <div class="card">
@@ -46,14 +61,82 @@
         </div>
       </section>
 
+      <section id="estilos" class="container estilos">
+        <h3>Estilos</h3>
+        <p class="muted">Clique em cada estilo para ver a foto. Substitua as imagens em <code>assets/images/</code>.</p>
+        <div class="styles-grid">
+          <article class="style-card">
+            <img src="assets/images/style-1.jpg" alt="Box Braids - exemplo" />
+            <div class="card-body">
+              <h4>Box Braids</h4>
+              <p>Tranças clássicas, versáteis e duráveis. Ideal para quem quer proteção e estilo por semanas.</p>
+              <a class="btn small" href="#contato">Agendar</a>
+            </div>
+          </article>
+
+          <article class="style-card">
+            <img src="assets/images/style-2.jpg" alt="Twist - exemplo" />
+            <div class="card-body">
+              <h4>Twist</h4>
+              <p>Torções soltas, acabamento natural e leve. Ótimo para looks casuais e eventos.</p>
+              <a class="btn small" href="#contato">Agendar</a>
+            </div>
+          </article>
+
+          <article class="style-card">
+            <img src="assets/images/style-3.jpg" alt="Fulani Braids - exemplo" />
+            <div class="card-body">
+              <h4>Fulani Braids</h4>
+              <p>Detalhes com tranças finas e acessórios — perfeito para um visual sofisticado.</p>
+              <a class="btn small" href="#contato">Agendar</a>
+            </div>
+          </article>
+
+          <article class="style-card">
+            <img src="assets/images/style-4.jpg" alt="Penteado para festa - exemplo" />
+            <div class="card-body">
+              <h4>Penteados para Eventos</h4>
+              <p>Penteados com acabamento para casamentos, formaturas e ocasiões especiais.</p>
+              <a class="btn small" href="#contato">Agendar</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section id="galeria" class="container gallery">
         <h3>Galeria</h3>
-        <p>Exemplos do trabalho — substitua as imagens em <code>assets/images/</code> pelas suas fotos.</p>
+        <p class="muted">Exemplos do trabalho — substitua as imagens em <code>assets/images/</code> pelas suas fotos reais.</p>
         <div class="gallery-grid">
-          <img alt="Trança 1" src="https://via.placeholder.com/600x400?text=Foto+1" />
-          <img alt="Trança 2" src="https://via.placeholder.com/600x400?text=Foto+2" />
-          <img alt="Trança 3" src="https://via.placeholder.com/600x400?text=Foto+3" />
-          <img alt="Trança 4" src="https://via.placeholder.com/600x400?text=Foto+4" />
+          <img alt="Trança 1" src="assets/images/gallery-1.jpg" />
+          <img alt="Trança 2" src="assets/images/gallery-2.jpg" />
+          <img alt="Trança 3" src="assets/images/gallery-3.jpg" />
+          <img alt="Trança 4" src="assets/images/gallery-4.jpg" />
+        </div>
+      </section>
+
+      <section id="cuidados" class="container cuidados">
+        <h3>Cuidados com o cabelo</h3>
+        <p class="muted">Instruções importantes para preservar a saúde dos fios antes e depois do procedimento.</p>
+        <div class="care-grid">
+          <div class="care-card">
+            <h4>Antes do procedimento</h4>
+            <ul>
+              <li>Lave o cabelo 24–48h antes para remover resíduos de produtos.</li>
+              <li>Evite química agressiva nas semanas anteriores.</li>
+              <li>Hidrate bem os fios e couro cabeludo.</li>
+              <li>Traga referências de fotos para o resultado esperado.</li>
+            </ul>
+          </div>
+
+          <div class="care-card">
+            <h4>Depois do procedimento</h4>
+            <ul>
+              <li>Proteja as tranças ao dormir com uma touca de cetim ou fronha adequada.</li>
+              <li>Evite molhar excessivamente nas primeiras 48h.</li>
+              <li>Use óleo ou sérum no couro cabeludo conforme orientação.</li>
+              <li>Agende manutenção conforme o tipo de trança (4–8 semanas).</li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -64,6 +147,7 @@
           <li>WhatsApp: <strong>(00) 9 9999-9999</strong> (substitua pelo seu número)</li>
           <li>E-mail: <strong>contato@trancasjoy.com</strong> (substitua pelo seu e-mail)</li>
         </ul>
+        <p class="muted">Também atendemos eventos e temos pacotes especiais — fale com a gente.</p>
       </section>
     </main>
 
@@ -74,7 +158,9 @@
     </footer>
 
     <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
+
+    <a class="whatsapp" href="https://wa.me/55XXXXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a>
   </body>
 </html>
