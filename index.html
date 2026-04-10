@@ -110,16 +110,34 @@
           </article>
 
           <article class="style-card">
-            <div class="carousel" id="fulani-carousel" aria-roledescription="carousel">
+            <div
+              class="carousel"
+              id="fulani-carousel"
+              aria-roledescription="carousel"
+            >
               <button class="carousel-btn prev" aria-label="Anterior">‹</button>
               <div class="carousel-track-wrap">
                 <ul class="carousel-track" id="fulani-track">
-                  <li class="carousel-slide"><img src="assets/images/style-person-1-large.jpg" alt="Fulani Braids - modelo 1" /></li>
-                  <li class="carousel-slide"><img src="assets/images/style-person-2-large.jpg" alt="Fulani Braids - modelo 2" /></li>
+                  <li class="carousel-slide">
+                    <img
+                      src="assets/images/style-person-1-large.jpg"
+                      alt="Fulani Braids - modelo 1"
+                    />
+                  </li>
+                  <li class="carousel-slide">
+                    <img
+                      src="assets/images/style-person-2-large.jpg"
+                      alt="Fulani Braids - modelo 2"
+                    />
+                  </li>
                 </ul>
               </div>
               <button class="carousel-btn next" aria-label="Próximo">›</button>
-              <div class="carousel-dots" id="fulani-dots" aria-hidden="false"></div>
+              <div
+                class="carousel-dots"
+                id="fulani-dots"
+                aria-hidden="false"
+              ></div>
             </div>
             <div class="card-body">
               <h4>Fulani Braids</h4>
@@ -254,35 +272,46 @@
 
     <script>
       // Carousel simples para Fulani
-      (function(){
-        const track = document.getElementById('fulani-track');
-        if(!track) return;
+      (function () {
+        const track = document.getElementById("fulani-track");
+        if (!track) return;
         const slides = Array.from(track.children);
-        const prev = document.querySelector('#fulani-carousel .prev');
-        const next = document.querySelector('#fulani-carousel .next');
-        const dotsWrap = document.getElementById('fulani-dots');
+        const prev = document.querySelector("#fulani-carousel .prev");
+        const next = document.querySelector("#fulani-carousel .next");
+        const dotsWrap = document.getElementById("fulani-dots");
         let index = 0;
 
-        function update(){
+        function update() {
           const w = track.parentElement.offsetWidth;
-          track.style.transform = `translateX(${ -index * w }px)`;
-          Array.from(dotsWrap.children).forEach((b,i)=> b.classList.toggle('active', i===index));
+          track.style.transform = `translateX(${-index * w}px)`;
+          Array.from(dotsWrap.children).forEach((b, i) =>
+            b.classList.toggle("active", i === index),
+          );
         }
 
-        slides.forEach((s,i)=>{
-          const btn = document.createElement('button');
-          btn.addEventListener('click', ()=>{ index = i; update(); });
-          if(i===0) btn.classList.add('active');
+        slides.forEach((s, i) => {
+          const btn = document.createElement("button");
+          btn.addEventListener("click", () => {
+            index = i;
+            update();
+          });
+          if (i === 0) btn.classList.add("active");
           dotsWrap.appendChild(btn);
         });
 
-        prev.addEventListener('click', ()=>{ index = (index-1+slides.length)%slides.length; update(); });
-        next.addEventListener('click', ()=>{ index = (index+1)%slides.length; update(); });
+        prev.addEventListener("click", () => {
+          index = (index - 1 + slides.length) % slides.length;
+          update();
+        });
+        next.addEventListener("click", () => {
+          index = (index + 1) % slides.length;
+          update();
+        });
 
-        window.addEventListener('resize', update);
-        document.addEventListener('keydown', (e)=>{
-          if(e.key==='ArrowLeft') prev.click();
-          if(e.key==='ArrowRight') next.click();
+        window.addEventListener("resize", update);
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowLeft") prev.click();
+          if (e.key === "ArrowRight") next.click();
         });
         // inicializa
         update();
